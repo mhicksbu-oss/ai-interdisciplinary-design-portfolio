@@ -1,0 +1,281 @@
+:root {
+  --pink: #f7b9cf;
+  --pink-light: #ffdce9;
+  --petal: #ffeff5;
+  --berry: #a52555;
+  --green: #46765b;
+  --ink: #27161d;
+  --line: rgba(39, 22, 29, 0.75);
+  --page-margin: clamp(22px, 5vw, 76px);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--pink);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 72% 12%, rgba(255, 255, 255, 0.35), transparent 24rem),
+    var(--pink);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.page-shell {
+  width: 100%;
+  padding-inline: var(--page-margin);
+}
+
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  padding-top: clamp(48px, 8vh, 96px);
+  overflow: hidden;
+}
+
+.hero__header {
+  position: relative;
+  z-index: 2;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  max-width: 18ch;
+  font-size: clamp(3.6rem, 6.5vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.072em;
+  line-height: 0.87;
+}
+
+.hero__name {
+  margin-top: clamp(18px, 3vw, 32px);
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.flower-field {
+  min-height: clamp(390px, 52vw, 680px);
+  position: relative;
+  flex: 1;
+  margin-top: clamp(20px, 4vh, 58px);
+  border-bottom: 1px solid var(--line);
+}
+
+.flower {
+  position: absolute;
+  bottom: -1px;
+  overflow: visible;
+  filter: drop-shadow(0 18px 20px rgba(113, 29, 61, 0.08));
+  cursor: pointer;
+  transform-origin: 50% 100%;
+  transform-box: fill-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flower:focus-visible {
+  outline: 3px solid var(--berry);
+  outline-offset: 7px;
+  border-radius: 50%;
+}
+
+.flower.is-swaying {
+  animation: flower-sway 900ms cubic-bezier(0.45, 0, 0.2, 1);
+}
+
+.flower--sprout {
+  left: var(--sprout-left);
+  width: var(--sprout-width);
+  transform: translateX(-50%);
+  scale: 0;
+  z-index: 2;
+  animation: flower-grow 900ms cubic-bezier(0.18, 0.8, 0.3, 1.15) forwards;
+}
+
+@keyframes flower-sway {
+  0%, 100% { rotate: 0deg; }
+  22% { rotate: -8deg; }
+  48% { rotate: 7deg; }
+  72% { rotate: -4deg; }
+}
+
+@keyframes flower-grow {
+  0% { scale: 0 0; }
+  55% { scale: 0.82 1.08; }
+  78% { scale: 1.04 0.97; }
+  100% { scale: 1 1; }
+}
+
+.flower .stem,
+.flower .leaf,
+.flower .bloom > * {
+  stroke: var(--line);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.flower .stem {
+  fill: none;
+  stroke: var(--green);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+.flower .leaf {
+  fill: #79a77d;
+}
+
+.flower .bloom ellipse {
+  fill: var(--petal);
+}
+
+.flower .flower-core {
+  fill: #f3cd58;
+}
+
+.flower--one {
+  left: 1%;
+  width: clamp(190px, 26vw, 360px);
+  transform: rotate(-6deg);
+}
+
+.flower--two {
+  left: 50%;
+  width: clamp(220px, 31vw, 430px);
+  transform: translateX(-50%) rotate(2deg);
+  z-index: 1;
+}
+
+.flower--two .bloom ellipse {
+  fill: #fff7fa;
+}
+
+.flower--three {
+  right: 0;
+  width: clamp(180px, 24vw, 335px);
+  transform: rotate(8deg);
+}
+
+.flower--three .bloom ellipse {
+  fill: #f6d7e3;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 44px);
+  padding-block: clamp(54px, 8vw, 112px);
+}
+
+.project-card {
+  min-width: 0;
+}
+
+.project-card:nth-child(2) {
+  align-self: center;
+}
+
+.project-card__visual {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--pink-light);
+}
+
+.project-card__main {
+  width: 100%;
+  height: auto;
+  transition: transform 500ms ease;
+}
+
+.project-card__main-link {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project-card__main-link:focus-visible {
+  outline: 4px solid var(--berry);
+  outline-offset: -4px;
+}
+
+.project-card__main-link:hover .project-card__main {
+  transform: scale(1.018);
+}
+
+.project-card h2 {
+  margin-top: 15px;
+  font-size: clamp(1.1rem, 1.8vw, 1.55rem);
+  font-weight: 650;
+  letter-spacing: -0.035em;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    min-height: auto;
+  }
+
+  h1 {
+    max-width: none;
+    font-size: clamp(2.05rem, 10.2vw, 4rem);
+    letter-spacing: -0.058em;
+    line-height: 0.9;
+  }
+
+  .flower-field {
+    min-height: 390px;
+  }
+
+  .flower--one {
+    left: -14%;
+    width: 235px;
+  }
+
+  .flower--two {
+    width: 270px;
+  }
+
+  .flower--three {
+    right: -15%;
+    width: 220px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card__main {
+    transition: none;
+  }
+
+  .flower.is-swaying {
+    animation: none;
+  }
+
+  .flower--sprout {
+    animation-duration: 1ms;
+  }
+}
