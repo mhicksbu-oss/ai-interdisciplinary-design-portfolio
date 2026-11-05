@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
-  <title id="title">Hallucination game proposal</title>
+  <title id="title">Don't Look Twice game proposal</title>
   <desc id="desc">Layered pink and violet doorways surround a glowing acid-green light on a dark background.</desc>
   <defs>
     <radialGradient id="glow" cx="50%" cy="50%" r="62%">
@@ -24,8 +24,9 @@
     <rect x="995" y="155" width="390" height="610" fill="url(#glow)"/>
   </g>
   <text x="90" y="100" fill="#e7ff4f" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="700" letter-spacing="4">INTERACTIVE NARRATIVE GAME PROPOSAL</text>
-  <text x="85" y="715" fill="#f7b9cf" font-family="Arial, Helvetica, sans-serif" font-size="132" font-weight="800" letter-spacing="-8">HALLUCINATION</text>
-  <text x="92" y="785" fill="#ffffff" fill-opacity="0.68" font-family="Arial, Helvetica, sans-serif" font-size="28">What if the world changed whenever you stopped looking at it?</text>
+  <text x="85" y="650" fill="#f7b9cf" font-family="Arial, Helvetica, sans-serif" font-size="128" font-weight="800" letter-spacing="-7">DON'T LOOK</text>
+  <text x="85" y="775" fill="#f7b9cf" font-family="Arial, Helvetica, sans-serif" font-size="128" font-weight="800" letter-spacing="-7">TWICE</text>
+  <text x="92" y="825" fill="#ffffff" fill-opacity="0.68" font-family="Arial, Helvetica, sans-serif" font-size="28">What if the world changed whenever you stopped looking at it?</text>
   <line x1="90" y1="875" x2="1510" y2="875" stroke="#ffffff" stroke-opacity="0.22"/>
   <text x="92" y="920" fill="#ffffff" fill-opacity="0.5" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="3">PERCEPTION / MEMORY / MISSING EVIDENCE</text>
 </svg>

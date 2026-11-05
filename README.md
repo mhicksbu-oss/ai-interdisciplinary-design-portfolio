@@ -8,4 +8,4 @@ The site uses relative URLs only and requires no build step.
 
 - Album Cover
 - Studio Design
-- Hallucination Game Proposal
+- Don't Look Twice Game Proposal
