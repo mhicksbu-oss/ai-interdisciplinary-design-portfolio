@@ -193,6 +193,12 @@ h1 {
   align-self: center;
 }
 
+.project-card:nth-child(3) {
+  grid-column: 1 / -1;
+  width: min(72%, 920px);
+  justify-self: center;
+}
+
 .project-card__visual {
   position: relative;
   overflow: hidden;
@@ -221,6 +227,77 @@ h1 {
 
 .project-card__main-link:hover .project-card__main {
   transform: scale(1.018);
+}
+
+.game-card-art {
+  position: relative;
+  min-height: clamp(350px, 48vw, 650px);
+  overflow: hidden;
+  color: #f7b9cf;
+  background:
+    radial-gradient(circle at 74% 48%, rgba(231, 255, 79, 0.22), transparent 25%),
+    #101112;
+}
+
+.game-card-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 35%, rgba(113, 103, 255, 0.13), transparent 75%);
+}
+
+.game-card-art__label {
+  position: absolute;
+  z-index: 3;
+  top: clamp(24px, 4vw, 52px);
+  left: clamp(24px, 4vw, 52px);
+  color: #e7ff4f;
+  font-size: clamp(0.62rem, 1vw, 0.8rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.game-card-art strong {
+  position: absolute;
+  z-index: 3;
+  left: clamp(24px, 4vw, 52px);
+  bottom: clamp(28px, 5vw, 66px);
+  max-width: 7ch;
+  font-size: clamp(2.6rem, 7vw, 7rem);
+  letter-spacing: -0.075em;
+  line-height: 0.82;
+}
+
+.game-card-art__door {
+  position: absolute;
+  top: 50%;
+  right: 11%;
+  width: clamp(135px, 24vw, 300px);
+  height: clamp(220px, 36vw, 460px);
+  border: 2px solid rgba(255, 255, 255, 0.72);
+  transform-origin: center;
+}
+
+.game-card-art__door--pink {
+  background: #ff5c8a;
+  transform: translate(-8%, -48%) rotate(-6deg);
+  opacity: 0.75;
+}
+
+.game-card-art__door--violet {
+  background: #7167ff;
+  transform: translate(8%, -52%) rotate(5deg);
+  opacity: 0.75;
+}
+
+.game-card-art__door--front {
+  background: radial-gradient(circle at center, #c8df3f, #101112 64%);
+  transform: translate(0, -50%);
+}
+
+.project-card__main-link:hover .game-card-art {
+  filter: saturate(1.08);
 }
 
 .project-card h2 {
@@ -263,6 +340,15 @@ h1 {
   .projects {
     grid-template-columns: 1fr;
     gap: 50px;
+  }
+
+  .project-card:nth-child(3) {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .game-card-art__door {
+    right: 4%;
   }
 }
 
