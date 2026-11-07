@@ -192,6 +192,17 @@ img { display: block; width: 100%; }
   background: var(--ink);
 }
 
+.project-action--primary {
+  color: var(--pink);
+  background: var(--ink);
+}
+
+.project-action--primary:hover,
+.project-action--primary:focus-visible {
+  color: var(--ink);
+  background: transparent;
+}
+
 .game-preview-link {
   display: block;
   color: inherit;
