@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Don't Look Twice, a playable interactive narrative game by Marian." />
     <title>Don't Look Twice — Marian</title>
-    <link rel="stylesheet" href="project.css?v=20261106" />
+    <link rel="stylesheet" href="project.css?v=20261120" />
   </head>
   <body>
     <main class="project-page">
@@ -29,6 +29,7 @@
 
       <div class="project-actions" aria-label="Game proposal links">
         <a class="project-action project-action--primary" href="https://mhicksbu-oss.github.io/hallucination-game-proposal/game/" target="_blank" rel="noreferrer">Play the game ↗</a>
+        <a class="project-action" href="#process-note">Read the process note ↓</a>
         <a class="project-action" href="https://mhicksbu-oss.github.io/hallucination-game-proposal/" target="_blank" rel="noreferrer">View the proposal ↗</a>
         <a class="project-action" href="https://github.com/mhicksbu-oss/hallucination-game-proposal" target="_blank" rel="noreferrer">View research + source ↗</a>
       </div>
@@ -48,9 +49,14 @@
           </a>
         </figure>
 
-        <section class="project-step project-step--prompt" aria-label="Research question">
-          <h2 class="project-step__label">Research process</h2>
-          <blockquote class="project-step__prompt">Research <em>The Ratchelor: A Rat Dating Game</em> by Algorat. Find primary sources, identify credited contributors, and summarize what the creators say about the concept, interaction, visuals, and sound. Separate stated intentions from interpretation and identify what cannot be verified.</blockquote>
+        <section id="process-note" class="project-step project-step--prompt" aria-label="Testing and revision process note">
+          <h2 class="project-step__label">Testing + revision</h2>
+          <div class="project-step__prompt process-note">
+            <p><strong>What players noticed.</strong> Testers understood the memorize → look away → identify loop without extra explanation and consistently responded to the call-from-your-own-number premise, the case-file opening, and the unsettling room. They wanted a clearer difficulty curve, more story after each answer, stronger visual refinement, an explanation of what could change, and a less stressful option for small screens.</p>
+            <p><strong>What changed.</strong> I kept observation as the main interaction, repaired and refined the illustrated room, clarified that color, position, writing, and objects may change, and added immediate case-file fragments after every response. Timers now shorten across the three stages, while an optional Focus Mode removes them. The final stage asks the player to find two changes, and mobile play automatically brings the answer controls into view.</p>
+            <p><strong>How the theme developed.</strong> “Hallucination” is treated as a conflict between memory and visible evidence. The room does not simply hide answers; it creates competing versions of reality, while the copy learns from what the player notices and chooses.</p>
+            <p><strong>AI assistance.</strong> Generative AI assisted with code implementation, interface iteration, copy editing, and testing suggestions. I directed the concept, selected the feedback to prioritize, evaluated the revisions, and remain responsible for the final design.</p>
+          </div>
         </section>
       </section>
 

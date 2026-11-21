@@ -156,6 +156,10 @@ img { display: block; width: 100%; }
   line-height: 1.55;
 }
 
+.process-note p { margin: 0; }
+.process-note p + p { margin-top: 1.15em; }
+.process-note strong { font-size: 0.8em; letter-spacing: 0.08em; text-transform: uppercase; }
+
 .project-step--square .project-step__image { max-width: 900px; }
 
 .project-step--wide .project-step__image {
